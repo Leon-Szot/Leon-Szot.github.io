@@ -1,4 +1,13 @@
-export const collectionsData = [
+export interface Collection {
+  id: string;
+  name: string;
+  tag: string;
+  desc: string;
+  cover: string;
+  images: string[];
+}
+
+export const collectionsData: Collection[] = [
   {
     id: 'braided-hoodie',
     name: 'Braided Hoodie',

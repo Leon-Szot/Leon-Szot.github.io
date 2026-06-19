@@ -1,5 +1,3 @@
-import React from 'react';
-
 const StudioBio = () => {
   return (
     <section className="studio-bio">

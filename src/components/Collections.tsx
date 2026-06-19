@@ -1,7 +1,12 @@
-import React from 'react';
 import CollectionCard from './CollectionCard';
+import { Collection } from '../constants';
 
-const Collections = ({ collections, onCollectionClick }) => {
+interface CollectionsProps {
+  collections: Collection[];
+  onCollectionClick: (collection: Collection) => void;
+}
+
+const Collections = ({ collections, onCollectionClick }: CollectionsProps) => {
   return (
     <section className="collections-section" id="collections">
       <h3 className="group-title">KOLEKCJE</h3>

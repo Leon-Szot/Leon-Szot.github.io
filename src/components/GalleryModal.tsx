@@ -1,8 +1,14 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { Collection } from '../constants';
 
-const GalleryModal = ({ collection, onClose }) => {
+interface GalleryModalProps {
+  collection: Collection;
+  onClose: () => void;
+}
+
+const GalleryModal = ({ collection, onClose }: GalleryModalProps) => {
   useEffect(() => {
-    const handleEsc = (e) => {
+    const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', handleEsc);

@@ -4,7 +4,7 @@ const Contact = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [formData, setFormData] = useState({ email: '', message: '' });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Simulate API call
     console.log('Form submitted:', formData);

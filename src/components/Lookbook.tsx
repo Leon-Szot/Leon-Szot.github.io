@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 
 const Lookbook = () => {
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<HTMLDivElement>(null);
 
-  const scrollSlider = (direction) => {
+  const scrollSlider = (direction: 'prev' | 'next') => {
     if (sliderRef.current) {
       const scrollAmount = direction === 'next' ? 315 : -315;
       sliderRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });

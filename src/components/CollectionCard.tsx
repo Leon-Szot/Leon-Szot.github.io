@@ -1,6 +1,11 @@
-import React from 'react';
+import { Collection } from '../constants';
 
-const CollectionCard = ({ collection, onClick }) => {
+interface CollectionCardProps {
+  collection: Collection;
+  onClick: (collection: Collection) => void;
+}
+
+const CollectionCard = ({ collection, onClick }: CollectionCardProps) => {
   return (
     <article className="collection-card" onClick={() => onClick(collection)}>
       <div className="card-image-box">

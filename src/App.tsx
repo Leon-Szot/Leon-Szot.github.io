@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Header from './components/Header';
 import Lookbook from './components/Lookbook';
 import StudioBio from './components/StudioBio';
@@ -6,11 +6,11 @@ import Collections from './components/Collections';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import GalleryModal from './components/GalleryModal';
-import { collectionsData } from './constants';
+import { collectionsData, Collection } from './constants';
 import './App.css';
 
 function App() {
-  const [selectedCollection, setSelectedCollection] = useState(null);
+  const [selectedCollection, setSelectedCollection] = useState<Collection | null>(null);
 
   return (
     <div className="app">
